@@ -11,6 +11,9 @@
   transition: opacity 1s ease;
   opacity: 1;
 }
+.start__fade-in {
+  overflow: hidden;
+}
 
 .start.hidden {
   opacity: 0; /* Робимо стартову секцію невидимою */

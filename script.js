@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
    // Затримка перед появою кнопки
    setTimeout(() => {
     cake.classList.add('visible'); // Додаємо клас для видимості
-   }, 2000); // 8000 мс = 8 секунд
+   }, 8000); // 8000 мс = 8 секунд
   
   cake.addEventListener('click', function () {
     gifElement.classList.add('visible'); // Додаємо клас для відображення гіфки
     setTimeout(() => {
       cake.style.display = 'none'; // Додаємо клас для видимості
-    }, 100); // 8000 мс = 8 секунд
+    }, 8000); // 8000 мс = 8 секунд
     
      setTimeout(() => {
        per.classList.add('visible');
-      }, 2000); // 6000 мс = 8 секунд
+      }, 6000); // 6000 мс = 8 секунд
   });
 
   
