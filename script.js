@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gifElement.classList.add('visible'); // Додаємо клас для відображення гіфки
     setTimeout(() => {
       cake.style.display = 'none'; // Додаємо клас для видимості
-    }, 8000); // 8000 мс = 8 секунд
+    }, 200); // 8000 мс = 8 секунд
     
      setTimeout(() => {
        per.classList.add('visible');

@@ -1,11 +1,13 @@
-.per__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-image: url(../img/bg.jpg);
+@charset "UTF-8";
+.per {
   height: 100vh;
-  background-size: cover;
+  overflow: hidden;
+}
+.per__bg-img {
+  width: 100%; /* Ширина на 100% */
+  height: auto; /* Автоматична висота */
+  min-height: 100%; /* Мінімальна висота на 100% */
+  min-width: 100%;
 }
 .per__box {
   position: absolute;
@@ -29,7 +31,7 @@
           align-items: center;
 }
 .per__title {
-  color: rgb(105, 129, 179);
+  color: rgb(35, 55, 99);
 }
 .per__border {
   margin-top: 10px;
@@ -48,7 +50,12 @@
   width: 100%;
   padding: 20px;
   border-radius: 5px;
-  background-image: url(../img/bg-stars.png);
+  position: relative;
+}
+.per__border-img {
+  position: absolute;
+  height: 100px;
+  z-index: 0;
 }
 .per__img {
   height: 200px;
@@ -58,7 +65,7 @@
 }
 .per__passwordT {
   font-size: 25px;
-  color: #ffffff;
+  color: #1e1e1e;
 }
 .per__input-area {
   margin-top: 10px;
