@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.time__bg {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.time__video {
+  position: absolute; /* Абсолютне позиціювання */
+  top: 60%; /* Центрування по вертикалі */
+  left: 50%; /* Центрування по горизонталі */
+  width: 100%; /* Ширина на 100% */
+  height: auto; /* Автоматична висота */
+  min-height: 100%; /* Мінімальна висота на 100% */
+  min-width: 100%; /* Мінімальна ширина на 100% */
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); /* Центрування відео */
+  z-index: -1;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+.time__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.631); /* Чорний колір з прозорістю */
+  z-index: 0;
+}
+.time__time {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.time__time--small {
+  font-size: 15px;
+}
+.time__time--day {
+  line-height: 140px;
+  font-size: 90px;
+}
+.time__box {
+  position: absolute;
+  top: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.time__box--1 {
+  padding-left: 80px;
+}
+.time__box--2 {
+  padding-left: 130px;
+}
+.time__box--3 {
+  padding-left: 60px;
+}
+.time__box--4 {
+  padding-left: 60px;
+}
+.time__link {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(100, 100, 255);
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -200px;
+  right: -300px;
+}
+.time__link:hover {
+  background-color: rgb(80, 80, 230);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}

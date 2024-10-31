@@ -1,0 +1,114 @@
+.about {
+  background: #022b49;
+  padding-bottom: 100px;
+  overflow: hidden;
+  position: relative;
+
+  &__title {
+    padding-top: 100px;
+    color: rgb(209, 233, 255);
+    font-size: 50px;
+    text-align: center;
+  }
+
+  &__articles {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Дві колонки */
+    gap: 50px;
+  }
+
+  &__item {
+    width: auto;
+    display: flex;
+    justify-content: end;
+    gap: 100px;
+    align-items: center;
+  }
+
+  &__item p {
+    white-space: normal;
+    color: #fff;
+    font-size: 22px;
+    line-height: 30px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff37;
+    // box-shadow: 20px 20px 0px rgba(255, 255, 255, 0.595);
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.292);
+    width: 500px;
+  }
+
+  &__left {
+    grid-column: 1 / span 2;
+    justify-self: start;
+    padding-left: 100px;
+  }
+
+  &__right {
+    grid-column: 2;
+    padding-right: 100px;
+  }
+
+  &__img-box {
+    position: relative;
+  }
+
+  &__text {
+    width: 500px;
+  }
+
+  &__img-box {
+    height: 600px;
+    overflow: hidden;
+    box-shadow: 30px 30px 0px rgba(255, 255, 255, 0.84);
+  }
+
+  &__img {
+    height: 600px;
+    position: relative;
+
+    z-index: 10;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &--2 {
+      height: 500px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(100, 100, 255);
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+
+    margin-left: 50px;
+
+    &:hover {
+      background-color: rgb(80, 80, 230);
+      transition: all 0.3s;
+    }
+  }
+
+  &__fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Початкове зміщення вниз */
+    transition: opacity 3s ease, transform 3s ease; /* Тривалість та ефект анімації */
+  }
+
+  /* Коли елемент у видимій області */
+  .visible {
+    opacity: 1;
+    transform: translateY(0); /* Повертаємо в початкову позицію */
+  }
+}

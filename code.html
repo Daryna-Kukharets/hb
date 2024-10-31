@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <title>hb</title>
+</head>
+<body>
+  <div class="per__bg"></div>
+  <div class="per__box">
+    <h1 class="per__title per__title--1">Думав все так просто? :D</h1>
+    <h2 class="per__title per__title--2">А ноу, треба пароль</h2>
+    <div class="per__border">
+      <img class="per__img" src="./img/cat.jpg" alt="">
+
+      <div class="per__container">
+        <h1 class="per__passwordT">Пароль, бегом!</h1>
+        <div>
+          <input class="per__input-area"  id="password" readonly placeholder="** ** ****" />
+        </div>
+        <div class="per__buttons">
+          <button class="per__but" onclick="addDigit('1')">1</button>
+          <button class="per__but" onclick="addDigit('2')">2</button>
+          <button class="per__but" onclick="addDigit('3')">3</button>
+          <button class="per__but" onclick="addDigit('4')">4</button>
+          <button class="per__but" onclick="addDigit('5')">5</button>
+          <button class="per__but" onclick="addDigit('6')">6</button>
+          <button class="per__but" onclick="addDigit('7')">7</button>
+          <button class="per__but" onclick="addDigit('8')">8</button>
+          <button class="per__but" onclick="addDigit('9')">9</button>
+          <button class="per__but" onclick="clearInput()">C</button>
+          <button class="per__but" onclick="addDigit('0')">0</button>
+          <button class="per__but" onclick="backspace()">←</button>
+        </div>
+        <button class="per__submit-btn" onclick="submitPassword()">Перевірка</button>
+        <div id="message" class="per__message"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="password.js"></script>
+</body>
+</html>

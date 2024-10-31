@@ -1,0 +1,279 @@
+.start {
+  background-color: rgb(30, 30, 30);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.start.hidden {
+  opacity: 0; /* Робимо стартову секцію невидимою */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(100, 100, 255);
+  color: white;
+  border-radius: 5px;
+}
+
+.button-light {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.5s ease;
+  opacity: 0; /* Спочатку кнопка невидима */
+  transform: translateX(-50%); /* Зсунуто вниз для анімації */
+  animation: fadeInUp 1s forwards; /* Додаємо анімацію */
+  animation-delay: 0.5s; 
+
+  &:hover {
+    background-color: rgb(80, 80, 230);
+    transition: all 0.3s;
+  }
+}
+
+.second {
+  background-color: rgba(203, 164, 254, 0.378);
+  height: 100vh;
+  position: relative;
+  opacity: 0; /* Початково секція невидима */
+  transition: opacity 1s ease;
+
+  &__img {
+    height: 240px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+  }
+
+  &__cake {
+    height: 280px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__gif {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  &__baloon {
+    height: 250px;
+    position: absolute;
+    
+    
+    &--1 {
+      bottom: -250px;
+      animation: floatUp 8s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--2 {
+      bottom: -260px;
+      left: 30px;
+      animation: floatUp 7s ease forwards; 
+      animation-delay: 2s;
+    }
+    
+    &--3 {
+      bottom: -260px;
+      left: 90px;
+      animation: floatUp 9s ease forwards; 
+      animation-delay: 2.5s;
+    }
+
+    &--4 {
+      bottom: -260px;
+      left: 150px;
+      animation: floatUp 8s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--5 {
+      bottom: -260px;
+      left: 210px;
+      animation: floatUp 6s ease forwards; 
+      animation-delay: 3s;
+    }
+
+    &--6 {
+      bottom: -260px;
+      left: 330px;
+      animation: floatUp 9s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--7 {
+      bottom: -250px;
+      left: 400px;
+      animation: floatUp 4s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--8 {
+      bottom: -260px;
+      left: 490px;
+      animation: floatUp 7s ease forwards; 
+      animation-delay: 2s;
+    }
+    
+    &--9 {
+      bottom: -260px;
+      left: 560px;
+      animation: floatUp 4s ease forwards; 
+      animation-delay: 2.5s; // vtyie pfnhbvre
+    }
+
+    &--10 {
+      bottom: -260px;
+      left: 650px;
+      animation: floatUp 8s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--11 {
+      bottom: -260px;
+      left: 740px;
+      animation: floatUp 6s ease forwards; 
+      animation-delay: 3s;
+    }
+
+    &--12 {
+      bottom: -260px;
+      left: 850px;
+      animation: floatUp 9s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    
+    &--13 {
+      bottom: -260px;
+      left: 920px;
+      animation: floatUp 9s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--14 {
+      bottom: -250px;
+      left: 1080px;
+      animation: floatUp 5s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--15 {
+      bottom: -260px;
+      left: 1120px;
+      animation: floatUp 7s ease forwards; 
+      animation-delay: 2s;
+    }
+    
+    &--16 {
+      bottom: -260px;
+      left: 1230px;
+      animation: floatUp 6s ease forwards; 
+      animation-delay: 2.5s; // vtyie pfnhbvre
+    }
+
+    &--17 {
+      bottom: -260px;
+      left: 1390px;
+      animation: floatUp 8s ease forwards; 
+      animation-delay: 2s;
+    }
+
+    &--18 {
+      bottom: -260px;
+      left: 1450px;
+      animation: floatUp 6s ease forwards; 
+      animation-delay: 3s;
+    }
+
+    &--19 {
+      bottom: -260px;
+      left: 1600px;
+      animation: floatUp 9s ease forwards; 
+      animation-delay: 2s;
+    }
+  }
+
+  &__click {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Початковий стан невидимий */
+    transition: opacity 1s ease; /* Плавний перехід для появи */
+    z-index: 10;
+
+    &:hover {
+      background-color: rgb(80, 80, 230);
+      transition: all 0.3s;
+    }
+
+    &.visible {
+      opacity: 1; /* Кнопка стає видимою */
+    }
+  }
+
+  &__per {
+    position: absolute;
+    bottom: 5px;
+    right: 50px;
+    transition: opacity 1s ease; /* Плавний перехід для появи */
+    z-index: 15;
+    opacity: 0;
+    
+    &:hover {
+      background-color: rgb(80, 80, 230);
+      transition: all 0.3s;
+    }
+
+    &.visible {
+      opacity: 1; /* Кнопка стає видимою */
+    }
+  }
+  
+}
+
+.second.visible {
+  opacity: 1;
+}
+
+.gif-box {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Кнопка стає видимою */
+    transform: translateX(-50%); /* Повертається на місце */
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0); /* Початкове положення */
+  }
+  100% {
+    transform: translateY(-1200px); /* Піднімаємо кульки */
+  }
+}

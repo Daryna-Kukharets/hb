@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.about {
+  background: #022b49;
+  padding-bottom: 100px;
+  overflow: hidden;
+  position: relative;
+  /* Коли елемент у видимій області */
+}
+.about__title {
+  padding-top: 100px;
+  color: rgb(209, 233, 255);
+  font-size: 50px;
+  text-align: center;
+}
+.about__articles {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Дві колонки */
+  gap: 50px;
+}
+.about__item {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about__item p {
+  white-space: normal;
+  color: #fff;
+  font-size: 22px;
+  line-height: 30px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2156862745);
+  -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.292);
+          box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.292);
+  width: 500px;
+}
+.about__left {
+  grid-column: 1/span 2;
+  justify-self: start;
+  padding-left: 100px;
+}
+.about__right {
+  grid-column: 2;
+  padding-right: 100px;
+}
+.about__img-box {
+  position: relative;
+}
+.about__text {
+  width: 500px;
+}
+.about__img-box {
+  height: 600px;
+  overflow: hidden;
+  -webkit-box-shadow: 30px 30px 0px rgba(255, 255, 255, 0.84);
+          box-shadow: 30px 30px 0px rgba(255, 255, 255, 0.84);
+}
+.about__img {
+  height: 600px;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.about__img--2 {
+  height: 500px;
+}
+.about__img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.about__link {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(100, 100, 255);
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  margin-left: 50px;
+}
+.about__link:hover {
+  background-color: rgb(80, 80, 230);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.about__fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px); /* Початкове зміщення вниз */
+  -webkit-transition: opacity 3s ease, -webkit-transform 3s ease;
+  transition: opacity 3s ease, -webkit-transform 3s ease;
+  transition: opacity 3s ease, transform 3s ease;
+  transition: opacity 3s ease, transform 3s ease, -webkit-transform 3s ease; /* Тривалість та ефект анімації */
+}
+.about .visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0); /* Повертаємо в початкову позицію */
+}

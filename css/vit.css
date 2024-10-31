@@ -1,0 +1,15 @@
+.vit {
+  background: rgb(29, 99, 149);
+  background: linear-gradient(313deg, rgb(29, 99, 149) 0%, rgb(2, 28, 47) 100%);
+  height: auto;
+}
+.vit__text {
+  margin: 0;
+  color: #fff;
+  white-space: normal;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 50px;
+  padding: 30px 30px;
+  line-height: 34px;
+}

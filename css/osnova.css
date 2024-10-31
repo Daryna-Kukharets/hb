@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.osnova {
+  background: rgb(13, 62, 97);
+  background: linear-gradient(313deg, rgb(13, 62, 97) 0%, rgb(1, 28, 47) 100%);
+  padding-bottom: 100px;
+}
+.osnova__title {
+  padding-top: 100px;
+  color: rgb(209, 233, 255);
+  font-size: 50px;
+  text-align: center;
+}
+.osnova__table {
+  width: 40%;
+  margin: 50px auto 0;
+  border-collapse: collapse;
+}
+.osnova__td {
+  border: 4px dashed #fff;
+  padding: 8px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.osnova__td-text {
+  color: #fff;
+  font-size: 30px;
+}
+.osnova__td-img {
+  height: 200px;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/* Клас для активації анімації */
+.fade-in {
+  opacity: 0; /* Початкова прозорість */
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: fadeInUp 0.8s ease forwards;
+          animation: fadeInUp 0.8s ease forwards;
+}

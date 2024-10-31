@@ -1,0 +1,91 @@
+.time {
+  &__bg {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__video {
+    position: absolute; /* Абсолютне позиціювання */
+    top: 60%; /* Центрування по вертикалі */
+    left: 50%; /* Центрування по горизонталі */
+    width: 100%; /* Ширина на 100% */
+    height: auto; /* Автоматична висота */
+    min-height: 100%; /* Мінімальна висота на 100% */
+    min-width: 100%; /* Мінімальна ширина на 100% */
+    transform: translate(-50%, -50%); /* Центрування відео */
+    z-index: -1; 
+    filter: blur(3px);
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.631); /* Чорний колір з прозорістю */
+    z-index: 0; 
+  }
+
+  &__time {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+
+    &--small {
+      font-size: 15px;
+    }
+
+    &--day {
+      line-height: 140px;
+      font-size: 90px;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: 80%;
+    display: flex;
+
+    &--1 {
+      padding-left: 80px;
+    }
+
+    &--2 {
+      padding-left: 130px;
+    }
+
+    &--3 {
+      padding-left: 60px;
+    }
+
+    &--4 {
+      padding-left: 60px;
+    }
+  }
+
+  &__link {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(100, 100, 255);
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -200px;
+    right: -300px;
+
+    &:hover {
+      background-color: rgb(80, 80, 230);
+      transition: all 0.3s;
+    }
+  }
+}
